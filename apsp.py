@@ -43,11 +43,20 @@ def another_algorithm(G):
 
     return L
 
+
 g = [
     [0, 3, None, None],
     [None, 0, 12, 5],
     [4, None, 0, -1],
     [2, -4, None, 0]
 ]
+# intentional bad graph, has a negative-weight cycle
+# g = [
+#     [0, 3, None, None, None],
+#     [None, 0, 1, None, None],
+#     [None, None, 0, -1, 4],
+#     [None, -1, None, 0, None],
+#     [None, None, None, None, 0]
+# ]
 print floyd_warshall(g)
 print another_algorithm(g)
